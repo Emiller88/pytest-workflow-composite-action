@@ -16,8 +16,6 @@ inputs:
 runs:
   using: "composite"
   steps:
-      - uses: actions/checkout@v2
-
       - name: Install Nextflow
         env:
           NXF_VER: ${{ inputs.nxf_version }}
