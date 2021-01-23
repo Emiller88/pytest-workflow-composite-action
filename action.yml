@@ -27,9 +27,9 @@ runs:
       - name: Install dependencies
         env:
           NXF_ANSI_LOG: false
-        run: python3 -m pip install --upgrade pip pytest-workflow
+        run: python3 -m pip install --user pytest-workflow
         shell: bash
 
       # Test the module
-      - run: pytest ---tag ${{ inputs.pytest_tags}} --symlink --wt 2
+      - run: python3 -m pytest ---tag ${{ inputs.pytest_tags}} --symlink --wt 2
         shell: bash
