@@ -19,5 +19,5 @@ jobs:
       - name: Nextflow pytest-workflow
         uses: ./.
         with:
-          pytest_tags: 'fastqc'
+          pytest_tags: 'default'
           nxf_version: ${{ matrix.nxf_version }}
