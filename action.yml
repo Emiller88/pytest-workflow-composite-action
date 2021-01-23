@@ -27,7 +27,7 @@ runs:
       - name: Install dependencies
         env:
           NXF_ANSI_LOG: false
-        run: python -m pip install --upgrade pip pytest-workflow
+        run: python3 -m pip install --upgrade pip pytest-workflow
         shell: bash
 
       # Test the module
