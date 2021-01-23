@@ -27,7 +27,7 @@ runs:
       - name: Install dependencies
         env:
           NXF_ANSI_LOG: false
-        run: python3 -m pip install --user pytest-workflow
+        run: python3 -m pip install --user setuptools pytest-workflow
         shell: bash
 
       # Test the module
