@@ -5,3 +5,14 @@
   stdout:
     contains:
       - "Hello from Docker!"
+
+- name: Run Nextflow hello
+  command: nextflow run hello
+  tags:
+    - default
+  stdout:
+    contains:
+      - "Bonjour world!"
+      - "Hello world!"
+      - "Hola world!"
+      - "Ciao world!"
