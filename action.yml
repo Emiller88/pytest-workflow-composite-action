@@ -26,7 +26,8 @@ runs:
 
       - name: Install setuptools
         run: python -m pip install --upgrade pip setuptools wheel
-        shell bash
+        shell: bash
+
       - name: Install pytest-workflow
         run: python3 -m pip install --user pytest-workflow
         shell: bash
