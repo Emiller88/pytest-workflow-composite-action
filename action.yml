@@ -24,8 +24,6 @@ runs:
           wget -qO- get.nextflow.io | bash
           sudo mv nextflow /usr/local/bin/
 
-        env:
-          NXF_ANSI_LOG: false
       - name: Install setuptools
         run: python -m pip install --upgrade pip setuptools wheel
         shell bash
@@ -35,4 +33,6 @@ runs:
 
       # Test the module
       - run: python3 -m pytest ---tag ${{ inputs.pytest_tags}} --symlink --wt 2
+        env:
+          NXF_ANSI_LOG: false
         shell: bash
