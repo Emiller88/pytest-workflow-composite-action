@@ -1,0 +1,7 @@
+- name: Run docker hello-world
+  command: docker run hello-world
+  tags:
+    - default
+  stdout:
+    contains:
+      - "Hello from Docker!"
