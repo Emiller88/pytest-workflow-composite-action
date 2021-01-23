@@ -33,7 +33,7 @@ runs:
         shell: bash
 
       # Test the module
-      - run: python3 -m pytest ---tag ${{ inputs.pytest_tags}} --symlink --wt 2
+      - run: python3 -m pytest --tag ${{ inputs.pytest_tags}} --symlink --wt 2
         env:
           NXF_ANSI_LOG: false
         shell: bash
