@@ -2,6 +2,7 @@
   command: docker run hello-world
   tags:
     - default
+    - docker
   stdout:
     contains:
       - "Hello from Docker!"
@@ -9,7 +10,7 @@
 - name: Run Nextflow hello
   command: nextflow run hello
   tags:
-    - default
+    - nextflow
   stdout:
     contains:
       - "Bonjour world!"

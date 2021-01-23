@@ -19,5 +19,11 @@ jobs:
       - name: Nextflow pytest-workflow
         uses: ./.
         with:
-          pytest_tags: 'default'
+          pytest_tags: 'default --tag docker'
+          nxf_version: ${{ matrix.nxf_version }}
+
+      - name: Nextflow pytest-workflow
+        uses: ./.
+        with:
+          pytest_tags: 'nextflow'
           nxf_version: ${{ matrix.nxf_version }}
