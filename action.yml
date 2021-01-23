@@ -33,16 +33,3 @@ runs:
       # Test the module
       - run: pytest ---tag ${{ inputs.pytest_tags}} --symlink --wt 2
         shell: bash
-
-        # TODO https://github.com/nf-core/modules/actions/runs/504499935
-        # Breaking because of uses and lack of shell
-      - name: Upload logs on failure
-        if: failure()
-        id: upload-logs
-        uses: actions/upload-artifact@v2
-        with:
-          name: logs ${{ inputs.pytest_tags }} ${{ inputs.nxf_version }}
-          path: |
-            /tmp/pytest_workflow_*/*/.nextflow.log
-            /tmp/pytest_workflow_*/*/log.out
-            /tmp/pytest_workflow_*/*/log.err
